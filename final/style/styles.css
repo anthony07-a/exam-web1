@@ -100,29 +100,3 @@ input{
     height: 50px; /* Adjust height as needed */
 }    
 
-/* Fleurs de sakura */
-/* .sakura {
-    position: fixed;
-    top: -10px;
-    z-index: 999;
-    pointer-events: none;
-    opacity: 0.8;
-}
-
-.sakura::before {
-    content: "❀";
-    font-size: 20px;
-    color: #ffb7c5;
-} */
-
-/* Animation de chute naturelle */
-/* @keyframes falling {
-    0% {
-        transform: translate(0, -10px) rotate(0deg);
-    }
-    100% {
-        transform: translate(var(--end-x), var(--end-y)) rotate(360deg);
-    }
-} */
-
-
