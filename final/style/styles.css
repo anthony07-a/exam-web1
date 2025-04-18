@@ -1,0 +1,128 @@
+@import url(https://fonts.google.com/specimen/Winky+Rough);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(0deg, #FADCD5, #977a86,  #6D3C52, #4B2138, #2D222F, #1B0C1A); 
+                                                
+
+}
+
+header h1{
+    margin: 3rem 0 3rem 0;
+    text-align: center;
+    font-family: 'Japanese Style', sans-serif;
+    color: white;
+    font-size: 50px;
+}
+
+main{
+    border-radius: 1rem;
+    width: 75%;
+    padding: 1rem;
+    font-size: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #4B2138;
+    box-shadow: 5px 5px 20px #000000;
+    color: white;
+}
+
+main p{
+    line-height: 3rem;
+    white-space: 40px;
+}
+
+.aside{
+    padding: 1rem;
+    width: 20vw;
+    text-align: center;
+    background: #4B2138;
+    color: white;
+    box-shadow: 5px 5px 20px #000000;
+    border-radius: 20px;
+}
+
+.aside label{
+    font-family: sans-serif;
+    font-size: 25px;
+}
+
+select{
+    width: 6rem;
+    height: 2rem;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.aside select option{
+    font-size: 25px;
+}
+
+input{
+    text-align: center;
+    width: 35rem;
+    height: 4rem;
+    font-size: 25px;
+    border-radius: 5px;
+    margin: 2rem 0 2rem 0;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.aside p{
+    font-family: sans-serif;
+    font-size: 25px;
+    color: white;
+}
+
+/* New styles for explosion particles */
+.particle {
+    position: absolute;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.explosion-container {
+    position: relative;
+    width: 100%;
+    height: 50px; /* Adjust height as needed */
+}    
+
+/* Fleurs de sakura */
+/* .sakura {
+    position: fixed;
+    top: -10px;
+    z-index: 999;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.sakura::before {
+    content: "❀";
+    font-size: 20px;
+    color: #ffb7c5;
+} */
+
+/* Animation de chute naturelle */
+/* @keyframes falling {
+    0% {
+        transform: translate(0, -10px) rotate(0deg);
+    }
+    100% {
+        transform: translate(var(--end-x), var(--end-y)) rotate(360deg);
+    }
+} */
+
+

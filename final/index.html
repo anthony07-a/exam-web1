@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Test</title>
+    <link rel="stylesheet" href="style/styles.css">
+    <link href="https://fonts.cdnfonts.com/css/japanese-style" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Typing Test</h1>
+    </header>
+    <div class="container">
+        <main>
+            <p id="word-display"></p>
+            <div class="main-child">
+                <input type="text" id="input-field" autofocus placeholder="Start typing here.">
+            </div>
+            <div class="explosion-container"></div>
+        </main>
+
+        <div class="aside">
+            <label for="mode">Select Mode:</label>
+            <select id="mode">
+                <option class="first" value="easy">Easy</option>
+                <option class="second" value="medium">Medium</option>
+                <option class="third" value="hard">Hard</option>
+            </select>
+            <p id="results">Results : </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
