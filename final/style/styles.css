@@ -9,9 +9,8 @@
 body{
     height: 100vh;
     width: 100%;
-    background: linear-gradient(0deg, #FADCD5, #977a86,  #6D3C52, #4B2138, #2D222F, #1B0C1A); 
-                                                
-
+    background: linear-gradient(0deg, #FADCD5, #977a86,  #6D3C52, #4B2138, #2D222F, #1B0C1A);                                 
+    overflow: hidden;
 }
 
 header h1{
@@ -38,6 +37,7 @@ main{
 main p{
     line-height: 3rem;
     white-space: 40px;
+    font-family: sans-serif;
 }
 
 .aside{
@@ -97,6 +97,63 @@ input{
 .explosion-container {
     position: relative;
     width: 100%;
-    height: 50px; /* Adjust height as needed */
+    height: 70px;
 }    
 
+.funkey {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    margin-top: 3rem;
+  }
+  #row2{
+      margin-left: 8px;
+  }
+  #row3{
+      margin-left: 7rem;
+  }
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(13, 50px);
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .key {
+    width: 48px;
+    height: 48px;
+    border: 2px solid #FADCD5;
+    border-radius: 8px;
+    color: #FADCD5;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2a2a3a;
+    transition: background-color 0.2s;
+  }
+
+  .key.active {
+    background-color: #6D3C52;
+    animation: blink 0.4s ease-in-out;
+  }
+
+  @keyframes blink {
+    0%, 100% { background-color: #ffb7c5; }
+    50% { background-color: #ffb7c5; }
+  }
+
+.keyboard {
+display: flex;
+flex-direction: column;
+gap: 8px;
+margin-bottom: 20px;
+}
+
+.row {
+display: flex;
+gap: 8px;
+}

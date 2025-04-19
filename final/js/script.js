@@ -1,5 +1,5 @@
 function initPetals() {
-    // Injection du style
+    // Ajout du style
     const style = document.createElement('style');
     style.textContent = `
         .petal {
@@ -49,24 +49,6 @@ function initPetals() {
 
 document.addEventListener('DOMContentLoaded', initPetals);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let startTime = null, previousEndTime = null;
 let currentWordIndex = 0;
 const wordsToType = [];
@@ -83,6 +65,36 @@ const words = {
     hard: ["synchronize", "complicated", "development", "extravagant", "misconception"]
 };
 
+//Add a virtual keyboard effect
+const layout = [
+    ["a", "z", "e", "r", "t", "y", "u", "i", "o", "p"],
+    ["q", "s", "d", "f", "g", "h", "j", "k", "l", "m"],
+    ["w", "x", "c", "v", "b", "n"]
+  ];
+
+  const keyboard = document.getElementById("keyboard");
+
+  document.addEventListener("keydown", (clickMe) => {
+    const key = clickMe.key.toLowerCase();
+    const keyElement = document.querySelector(`.key[data-key='${key}']`);
+    if (keyElement) {
+      keyElement.classList.add("active");
+      setTimeout(() => keyElement.classList.remove("active"), 200);
+    }
+  });
+
+  layout.forEach((rowKeys, rowIndex) => {
+const row = document.getElementById(`row${rowIndex + 1}`);
+rowKeys.forEach((key) => {
+  const keyEl = document.createElement("div");
+  keyEl.className = "key";
+  keyEl.textContent = key;
+  keyEl.dataset.key = key;
+  row.appendChild(keyEl);
+});
+});
+
+
 // Generate a random word from the selected mode
 const getRandomWord = (mode) => {
     const wordList = words[mode];
@@ -90,7 +102,7 @@ const getRandomWord = (mode) => {
 };
 
 // Initialize the typing test
-const startTest = (wordCount = 5) => {
+const startTest = (wordCount = 15) => {
     wordsToType.length = 0; // Clear previous words
     wordDisplay.innerHTML = ""; // Clear display
     currentWordIndex = 0;
@@ -184,7 +196,7 @@ const updateWord = (event) => {
             if (!previousEndTime) previousEndTime = startTime;
 
             const { wpm, accuracy } = getCurrentStats();
-            results.textContent = `WPM: ${wpm}, Accuracy: ${accuracy}%`;
+            results.textContent = `WPM: ${wpm} and your Accuracy: ${accuracy}%`;
 
             const wordElements = wordDisplay.children;
             const currentWordElement = wordElements[currentWordIndex];
